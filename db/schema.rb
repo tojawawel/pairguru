@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_15_111744) do
+ActiveRecord::Schema.define(version: 2019_03_15_134832) do
 
   create_table "comments", force: :cascade do |t|
     t.text "body"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 2019_03_15_111744) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["movie_id"], name: "index_comments_on_movie_id"
+    t.index ["user_id", "movie_id"], name: "index_comments_on_user_id_and_movie_id", unique: true
     t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
