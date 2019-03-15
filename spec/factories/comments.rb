@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :comment do
-    body "MyText"
-    user nil
-    movie nil
+    body "Taki to komentarz"
+    user { FactoryBot.create(:user) }
+    movie { FactoryBot.create(:movie) }
   end
 end
