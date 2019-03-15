@@ -1,0 +1,8 @@
+%h1 Comments
+- @movie.comments.each do |comment|
+  .col-xs-8
+    .well.well-sm
+      %h4=comment.user.name
+      = comment.body
+      %br
+      =link_to "Delete", movie_comment_path(movie_id: comment.movie.id, id: comment.id), method: :delete, data: {confirm: "You sure?"}, class: "button btn btn-danger" if current_user == comment.user 
