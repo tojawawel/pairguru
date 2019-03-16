@@ -1,9 +1,7 @@
 =render 'common/errors', model: @comment
-= form_for [@movie, @comment ], url:movie_comments_path(@movie, @comment) do |f|
+= simple_form_for [@movie, @comment ] do |f|
   %form
     .form-group
-    = f.label :body
-    %br
-    = f.text_area :body
+    = f.input :body, errors: false, required: false
     .form-group
       =f.button :submit, class: "btn btn-primary"
