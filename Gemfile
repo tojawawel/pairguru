@@ -24,6 +24,7 @@ group :development do
   gem "rails-erd"
   gem "spring"
   gem "spring-commands-rspec"
+  gem 'simple_form'
 end
 
 group :development, :test do
