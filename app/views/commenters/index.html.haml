@@ -1,0 +1,13 @@
+%h1 Top commenters of last week
+%table.table
+  %thead
+    %tr
+      %th User
+      %th Comments
+  %tbody
+  - @commenters.each do |commenter|
+    %tr
+      %td
+        =commenter.name
+      %td
+        =commenter.comments_count
