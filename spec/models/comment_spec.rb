@@ -14,6 +14,6 @@ RSpec.describe Comment, type: :model do
 
   describe 'validations' do
     it {should validate_presence_of(:body)}
-    # it {should validate_uniqueness_of(:user_id).scoped_to(:movie_id) }
+    it {should validate_uniqueness_of(:user_id).scoped_to(:movie_id).with_message(" has already added a comment!") }
   end
 end
