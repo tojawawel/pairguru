@@ -1,5 +1,5 @@
 =render 'common/errors', model: @comment
-= form_for [@movie, @comment ], url:movie_comments_path(@movie, @comment) do |f|
+= form_for [@movie, @comment ] do |f|
   %form
     .form-group
     = f.label :body
