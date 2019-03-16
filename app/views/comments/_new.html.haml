@@ -2,6 +2,6 @@
 = simple_form_for [@movie, @comment ] do |f|
   %form
     .form-group
-    = f.input :body, errors: false, required: false
+    = f.input :body, error: false, required: false
     .form-group
       =f.button :submit, class: "btn btn-primary"
